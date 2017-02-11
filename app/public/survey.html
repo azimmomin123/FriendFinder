@@ -29,7 +29,7 @@
 
   <!-- Question 1 -->
   <h2>Question 1</h2>
-  <h4>Do you like to go to the gym?</h4>
+  <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
   <select class ="btn btn-primary button" id="q1">
     <option value="">Select a Option</option>
     <option value="1">1 (Strongly Disagree)</option>
@@ -38,10 +38,10 @@
     <option value="4">4</option>
     <option value="5">5 (Strongly Agree)</option>
   </select>
-
+  <!-- End of Question 1 -->
   <!-- Question 2 -->
   <h2>Question 2</h2>
-  <h4>You enjoy spontaneous trips than planned ones.</h4>
+  <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
   <select class ="btn btn-primary button" id="q2">
     <option value="">Select a Option</option>
     <option value="1">1 (Strongly Disagree)</option>
@@ -50,10 +50,10 @@
     <option value="4">4</option>
     <option value="5">5 (Strongly Agree)</option>
   </select>
-
+  <!-- End of Question 2 -->
   <!-- Question 3 -->
   <h2>Question 3</h2>
-  <h4>You feel more energetic after spending time with a group of people.</h4>
+  <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
   <select class ="btn btn-primary button" id="q3">
     <option value="">Select a Option</option>
     <option value="1">1 (Strongly Disagree)</option>
@@ -62,10 +62,125 @@
     <option value="4">4</option>
     <option value="5">5 (Strongly Agree)</option>
   </select>
+  <!-- End of Question 3 -->
+  <!-- Question 4 -->
+  <h2>Question 4</h2>
+  <h4>You rarely do something just out of sheer curiosity.</h4>
+  <select class ="btn btn-primary button" id="q4">
+    <option value="">Select a Option</option>
+    <option value="1">1 (Strongly Disagree)</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5 (Strongly Agree)</option>
+  </select>
+  <!-- End of Question 4 -->
+  <!-- Question 5 -->
+  <h2>Question 5</h2>
+  <h4>People can rarely upset you.</h4>
+  <select class ="btn btn-primary button" id="q5">
+    <option value="">Select a Option</option>
+    <option value="1">1 (Strongly Disagree)</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5 (Strongly Agree)</option>
+  </select>
+  <!-- End of Question 5 -->
+  <!-- Question 6 -->
+  <h2>Question 6</h2>
+  <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+  <select class ="btn btn-primary button" id="q6">
+    <option value="">Select a Option</option>
+    <option value="1">1 (Strongly Disagree)</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5 (Strongly Agree)</option>
+  </select>
+  <!-- End of Question 6 -->
+  <!-- Question 7 -->
+  <h2>Question 7</h2>
+  <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+  <select class ="btn btn-primary button" id="q7">
+    <option value="">Select a Option</option>
+    <option value="1">1 (Strongly Disagree)</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5 (Strongly Agree)</option>
+  </select>
+  <!-- End of Question 7 -->
+  <!-- Question 8 -->
+  <h2>Question 8</h2>
+  <h4>You rarely get carried away by fantasies and ideas.</h4>
+  <select class ="btn btn-primary button" id="q8">
+    <option value="">Select a Option</option>
+    <option value="1">1 (Strongly Disagree)</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5 (Strongly Agree)</option>
+  </select>
+  <!-- End of Question 8 -->
+  <!-- Question 9 -->
+  <h2>Question 9</h2>
+  <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+  <select class ="btn btn-primary button" id="q9">
+    <option value="">Select a Option</option>
+    <option value="1">1 (Strongly Disagree)</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5 (Strongly Agree)</option>
+  </select>
+  <!-- End of Question 9 -->
+  <!-- Question 10 -->
+  <h2>Question 10</h2>
+  <h4>You feel more energetic after spending time with a group of people.</h4>
+  <select class ="btn btn-primary button" id="q10">
+    <option value="">Select a Option</option>
+    <option value="1">1 (Strongly Disagree)</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5 (Strongly Agree)</option>
+  </select>
+  <!-- End of Question 10 -->
   <p></p>
   <br>
   <!-- Submit Button -->
-  <button class="btn btn-lg btn-success" id="submit">Submit</button>
+  <!-- <button class="btn btn-lg btn-success" id="submit">Submit</button> -->
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="submit">SUBMIT!</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Congrats you matched with..</h4>
+        </div>
+        <div class="modal-body">
+          <p id="nameData"></p>
+          <p id="photoData"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
   <!-- Links to API and Git -->
   <p><a href="/api/friends">API Friends List</a>   /   <a href="https://github.com/azimmomin123/FriendFinder">GitHub Repo</a></p>
 </div>
@@ -83,6 +198,13 @@
         $("#q1").val(),
         $("#q2").val(),
         $("#q3").val(),
+        $("#q4").val(),
+        $("#q5").val(),
+        $("#q6").val(),
+        $("#q7").val(),
+        $("#q8").val(),
+        $("#q9").val(),
+        $("#q10").val(),
       ]
     };
     //console.log(newSurvey);
@@ -90,7 +212,9 @@
     $.post("/api/friends", newSurvey)
     .done(function(data){
       console.log(data);
-      alert("added data");
+
+      $("#nameData").text(data.name);
+      $("#photoData").html("<img src='" + data.photo + "' width='250' height='250'>")
     });
 
   });

@@ -9,8 +9,14 @@ module.exports = function(app){
   });
 
   //Default route to the home page
-  app.use("/home", function(req, res){
+  app.get("/", function(req, res){
     res.sendFile(path.join(__dirname, "/../public/home.html"))
-  })
+  });
+
+  //Default route to the home page
+  // app.use(function(req, res){
+  //   res.sendFile(path.join(__dirname, "/../public/home.html"))
+  // });
+
 
 };
