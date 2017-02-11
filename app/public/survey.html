@@ -162,10 +162,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Congrats you matched with..</h4>
+          <h4 class="modal-title">Congrats you matched with...</h4>
         </div>
         <div class="modal-body">
-          <p id="nameData"></p>
+          <h1 id="nameData"></h1>
           <p id="photoData"></p>
         </div>
         <div class="modal-footer">
@@ -190,7 +190,7 @@
 <script type="text/javascript">
   $("#submit").on("click", function(event){
     event.preventDefault();
-
+    //Creating an object with all user inputs
     var newSurvey = {
       name: $("#name").val().trim(),
       photo: $("#photo").val().trim(),
@@ -208,11 +208,11 @@
       ]
     };
     //console.log(newSurvey);
-
+    //POST request to send data to do calculations and receive the friend with the best compatibility
     $.post("/api/friends", newSurvey)
     .done(function(data){
       console.log(data);
-
+      //Jquery inserting the data name and the photo to respective html tags
       $("#nameData").text(data.name);
       $("#photoData").html("<img src='" + data.photo + "' width='250' height='250'>")
     });
