@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Friend Finder</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Survey Questions</h1>
+
+  <h3><strong>About You</strong></h3>
+  <!-- Name input box -->
+  <div class="form-group">
+    <label for="usr">Name (Required)</label>
+    <input type="text" class="form-control" id="name">
+  </div>
+
+  <!-- Photo input box -->
+  <div class="form-group">
+    <label for="usr">Link to Photo Image (Required)</label>
+    <input type="text" class="form-control" id="photo">
+  </div>
+
+  <!-- Question 1 -->
+  <h2>Question 1</h2>
+  <h4>Do you like to go to the gym?</h4>
+  <select class ="btn btn-primary button" id="q1">
+    <option value="">Select a Option</option>
+    <option value="1">1 (Strongly Disagree)</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5 (Strongly Agree)</option>
+  </select>
+
+  <!-- Question 2 -->
+  <h2>Question 2</h2>
+  <h4>You enjoy spontaneous trips than planned ones.</h4>
+  <select class ="btn btn-primary button" id="q2">
+    <option value="">Select a Option</option>
+    <option value="1">1 (Strongly Disagree)</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5 (Strongly Agree)</option>
+  </select>
+
+  <!-- Question 3 -->
+  <h2>Question 3</h2>
+  <h4>You feel more energetic after spending time with a group of people.</h4>
+  <select class ="btn btn-primary button" id="q3">
+    <option value="">Select a Option</option>
+    <option value="1">1 (Strongly Disagree)</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5 (Strongly Agree)</option>
+  </select>
+  <p></p>
+  <br>
+  <!-- Submit Button -->
+  <button class="btn btn-lg btn-success" id="submit">Submit</button>
+  <!-- Links to API and Git -->
+  <p><a href="/api/friends">API Friends List</a>   /   <a href="https://github.com/azimmomin123/FriendFinder">GitHub Repo</a></p>
+</div>
+
+</body>
+
+<script type="text/javascript">
+  $("#submit").on("click", function(event){
+    event.preventDefault();
+
+    var newSurvey = {
+      name: $("#name").val().trim(),
+      photo: $("#photo").val().trim(),
+      scores: [
+        $("#q1").val(),
+        $("#q2").val(),
+        $("#q3").val(),
+      ]
+    };
+    //console.log(newSurvey);
+
+    $.post("/api/friends", newSurvey)
+    .done(function(data){
+      console.log(data);
+      alert("added data");
+    });
+
+  });
+</script>
+</html>
