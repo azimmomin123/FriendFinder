@@ -19,6 +19,7 @@
   "homepage": "https://github.com/azimmomin123/FriendFinder#readme",
   "dependencies": {
     "body-parser": "^1.16.0",
+    "express": "^4.14.1",
     "path": "^0.12.7"
   }
 }
